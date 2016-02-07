@@ -14,7 +14,7 @@ var Post = new keystone.List('Post', {
 
 Post.add({
 	title: { type: Types.Text, required: true, index: true, initial:true },
-	image: { type: Types.Text },
+	image: { type: Types.CloudinaryImage },
   text: { type: Types.Html, wysiwyg: true },
   category: { type: Types.Relationship, ref: 'Category' }
 });

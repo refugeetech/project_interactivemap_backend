@@ -14,7 +14,7 @@ var Section = new keystone.List('Section', {
 
 Section.add({
 	title: { type: Types.Text, required: true, index: true, initial:true },
-	image: { type: Types.Text }
+	image: { type: Types.CloudinaryImage }
 });
 
 Section.relationship({ path: 'categories', ref: 'Category', refPath: 'section' });

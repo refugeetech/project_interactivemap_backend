@@ -9,7 +9,7 @@ var Category = new keystone.List('Category', {
 
 Category.add({
 	title: { type: Types.Text, required: true, index: true, initial:true },
-	image: { type: Types.Text },
+	image: { type: Types.CloudinaryImage },
   text: { type: Types.Html, wysiwyg: true  },
   section: { type: Types.Relationship, ref: 'Section' }
 });
