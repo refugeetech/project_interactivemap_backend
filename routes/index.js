@@ -32,12 +32,15 @@ var routes = {
 	api: importRoutes('./api')
 };
 
+
+
+
 // Setup Route Bindings
 exports = module.exports = function(app) {
 
 	// Views
 	app.get('/', routes.views.index);
-	app.get('/api/sections', routes.api.sections.index )
+	app.get('/api/sections', middleware.allowCrossDomain, routes.api.sections.index )
 	app.get('/api/sections/:id', routes.api.sections.show )
 
 
